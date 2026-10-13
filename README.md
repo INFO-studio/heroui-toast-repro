@@ -4,7 +4,7 @@ Minimal reproduction for a HeroUI v3 Toast alignment issue.
 
 ## Live reproduction
 
-https://heroui-toast-repro.vercel.app
+https://info-studio.github.io/heroui-toast-repro/
 
 ## Environment
 
