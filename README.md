@@ -27,9 +27,12 @@ There is no custom theme or custom Toast CSS.
 1. A standalone success toast renders correctly.
 2. A standalone danger toast with a description renders correctly.
 3. A danger toast followed immediately by a success toast from an external control renders correctly.
-4. A danger toast whose interactive title button spawns a success toast reproduces the issue.
+4. A danger toast whose description button spawns success toasts reproduces the issue.
 
-For case 4, click **Create an interactive danger toast**, then click **Spawn success toast** inside the danger toast title. The newly created success toast has a vertically misaligned indicator and title.
+For case 4, click **Create an interactive danger toast**, then click **Spawn success toast** inside the danger toast description three times without clearing the stack:
+
+- The success toasts created by the first and second clicks show the indicator/title vertical misalignment.
+- After the third consecutive click, the alignment becomes correct again.
 
 ## Run locally
 
@@ -44,4 +47,10 @@ Then open the URL printed by Vite.
 
 ~~~bash
 pnpm build
+~~~
+
+## Type-check
+
+~~~bash
+pnpm typecheck
 ~~~
